@@ -79,6 +79,9 @@ export default {
   created(){
     this.listar();
   },
+  updated(){
+    this.listar();
+  },
   methods:{
       showModal() {
         this.$refs.myModalRegistrar.show();
@@ -103,7 +106,6 @@ export default {
         /**/
         if (this.resultado[0].RESPUESTA == 'SUCCESS') {
           this.hideModal();
-          this.listar();
           //this.$router.push('/');
         }else {
           console.log('FAIL');
